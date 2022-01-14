@@ -1,0 +1,71 @@
+\hypertarget{main_8py}{}\doxysection{main.\+py File Reference}
+\label{main_8py}\index{main.py@{main.py}}
+
+
+Sets sawtooth duty cycle for LED on Nucleo.  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{main_8py_a6ef5ac3570ce2c3589413b978e830e1d}{main.\+led\+\_\+setup}} ()
+\begin{DoxyCompactList}\small\item\em Sets up the led pin location, timer, and channel. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{main_8py_aec180c5e5ea6ecb2d5773390fcf2acef}{main.\+led\+\_\+brightness}} (ch1, bright)
+\begin{DoxyCompactList}\small\item\em Responsible for setting the PWM of the LED. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{main_8py_ad5300011de9c79fd75be615e4eb9749c}\label{main_8py_ad5300011de9c79fd75be615e4eb9749c}} 
+int {\bfseries main.\+brightness} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Sets sawtooth duty cycle for LED on Nucleo. 
+
+Program sets up timer and channel on Nucleo responsible for the LED. The program loops and sets brightness as a sawtooth wave, repeating after 5 seconds \begin{DoxyAuthor}{Author}
+Jack Barone 
+
+Luke Sandor 
+
+Jackson Meyers 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+1/4/2022 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+(c) 2258 by Nobody and released under GNU Public License v3 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{main_8py_aec180c5e5ea6ecb2d5773390fcf2acef}\label{main_8py_aec180c5e5ea6ecb2d5773390fcf2acef}} 
+\index{main.py@{main.py}!led\_brightness@{led\_brightness}}
+\index{led\_brightness@{led\_brightness}!main.py@{main.py}}
+\doxysubsubsection{\texorpdfstring{led\_brightness()}{led\_brightness()}}
+{\footnotesize\ttfamily def main.\+led\+\_\+brightness (\begin{DoxyParamCaption}\item[{}]{ch1,  }\item[{}]{bright }\end{DoxyParamCaption})}
+
+
+
+Responsible for setting the PWM of the LED. 
+
+Function takes in a brightness value between 0 and 100, and sets the the duty cycle for ch1 
+\begin{DoxyParams}{Parameters}
+{\em ch1} & ch1 object setup in \mbox{\hyperlink{main_8py_a6ef5ac3570ce2c3589413b978e830e1d}{led\+\_\+setup()}} \\
+\hline
+{\em bright} & desired duty cycle \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{main_8py_a6ef5ac3570ce2c3589413b978e830e1d}\label{main_8py_a6ef5ac3570ce2c3589413b978e830e1d}} 
+\index{main.py@{main.py}!led\_setup@{led\_setup}}
+\index{led\_setup@{led\_setup}!main.py@{main.py}}
+\doxysubsubsection{\texorpdfstring{led\_setup()}{led\_setup()}}
+{\footnotesize\ttfamily def main.\+led\+\_\+setup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Sets up the led pin location, timer, and channel. 
+
+Uses pyb library to setup hardware used for LED control \begin{DoxyReturn}{Returns}
+ch1 object 
+\end{DoxyReturn}
